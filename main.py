@@ -1,7 +1,18 @@
+import re
+
 
 def my_sum(input_data):
+    # Handle empty input_data
     if not input_data:
         return 0
+    
+    inputs = [int(x) for x in re.split(',|\n', input_data)]
+
+    result = sum(inputs)
+    # print("Result: ", result)
+
+    return result
+
 
 
 def test_empty_string():
@@ -17,5 +28,5 @@ def test_one_number():
 
 if __name__ == "__main__":
     test_empty_string()
-    # test_one_number()
+    test_one_number()
     print("All tests passed successfully!!!")
