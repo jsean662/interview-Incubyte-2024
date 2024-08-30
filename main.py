@@ -1,6 +1,7 @@
 
 def my_sum(input_data):
-    pass
+    if not input_data:
+        return 0
 
 
 def test_empty_string():
